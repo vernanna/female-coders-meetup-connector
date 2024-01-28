@@ -7,5 +7,5 @@
       "schedule": "0 */5 * * * *"
     }
   ],
-"scriptFile": "../../dist/unregister-reminder/index.js"
+  "scriptFile": "../dist/unregister-reminder/index.js"
 }
