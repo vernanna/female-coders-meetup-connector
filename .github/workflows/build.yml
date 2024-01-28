@@ -1,13 +1,15 @@
 name: Build
 
 on:
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 env:
   NODE_VERSION: '18.x'
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: windows-latest
     environment: dev
     steps:
@@ -24,6 +26,7 @@ jobs:
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
         npm install
-        npm run build --if-present
-        npm run test --if-present
+        npm run lint
+        npm run build
+        npm run test
         popd
