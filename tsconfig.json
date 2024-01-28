@@ -6,11 +6,11 @@
     "rootDir": ".",
     "baseUrl": "./",
     "paths": {
-      "*": ["./node_modules/*", "./*"],
+      "src/*": ["src/*"],
     },
     "sourceMap": true,
     "strict": false,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-  },
+    "emitDecoratorMetadata": true
+  }
 }

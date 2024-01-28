@@ -1,3 +1,3 @@
 export interface EventRepository {
-  getData(): Promise<string>
+  getData(): string
 }
