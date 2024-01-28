@@ -4,7 +4,13 @@
     "target": "es6",
     "outDir": "dist",
     "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./node_modules/*", "./*"],
+    },
     "sourceMap": true,
-    "strict": false
-  }
+    "strict": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+  },
 }
