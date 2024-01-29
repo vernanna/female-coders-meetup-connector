@@ -5,12 +5,9 @@
     "outDir": "dist",
     "rootDir": ".",
     "baseUrl": "./",
-    "paths": {
-      "src/*": ["src/*"],
-    },
     "sourceMap": true,
     "strict": false,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
   }
 }
