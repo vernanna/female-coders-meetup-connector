@@ -4,7 +4,10 @@
     "target": "es6",
     "outDir": "dist",
     "rootDir": ".",
+    "baseUrl": "./",
     "sourceMap": true,
-    "strict": false
+    "strict": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
   }
 }

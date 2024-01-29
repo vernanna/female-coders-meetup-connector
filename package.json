@@ -2,23 +2,33 @@
   "name": "",
   "version": "1.0.0",
   "description": "",
+  "main": "dist/src/functions/*.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "watch": "tsc -w",
-    "prestart": "npm run build",
+    "clean": "rimraf dist",
+    "prestart": "npm run clean && npm run build",
     "start": "func start",
     "test": "echo \"No tests yet...\"",
     "lint": "eslint . --ext .ts"
   },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "inversify": "^6.0.2",
+    "inversify-binding-decorators": "^4.0.0",
+    "reflect-metadata": "^0.2.1"
+  },
   "devDependencies": {
-    "@azure/functions": "^2.0.0",
-    "@types/node": "14.x",
+    "@types/node": "18.x",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
+    "azure-functions-core-tools": "^4.x",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "prettier": "^3.2.4",
+    "rimraf": "^5.0.0",
+    "tsc-alias": "^1.8.8",
     "typescript": "^4.0.0"
   }
 }
